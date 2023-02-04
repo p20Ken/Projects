@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>p20</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        #griddiv {
+            display: grid;
+            margin: auto;
+            width: 50%;
+            height: 500px;
+            grid-template-columns: auto auto;
+        }
+
+        div div {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>p20</h1>
+    <p>Hover over Tile = Orange, Hover out Tile = White, Click Tile = Pink</p>
+    <div id="griddiv">
+        <div id="div1"></div>
+        <div id="div2"></div>
+        <div id="div3"></div>
+        <div id="div4"></div>
+    </div>
+</body>
+<script>
+    let d1 = document.getElementById('div1');
+    let d2 = document.getElementById('div2');
+    let d3 = document.getElementById('div3');
+    let d4 = document.getElementById('div4');
+
+    d1.onmouseover = backgroundcolortoOrange1;
+    d1.onclick = backgroundcolortoPink1;
+    d1.addEventListener('mouseout', backgroundcolortoWhite1);
+    d2.onmouseover = backgroundcolortoOrange2;
+    d2.onclick = backgroundcolortoPink2;
+    d2.addEventListener('mouseout', backgroundcolortoWhite2);
+    d3.onmouseover = backgroundcolortoOrange3;
+    d3.onclick = backgroundcolortoPink3;
+    d3.addEventListener('mouseout', backgroundcolortoWhite3);
+    d4.onmouseover = backgroundcolortoOrange4;
+    d4.onclick = backgroundcolortoPink4;
+    d4.addEventListener('mouseout', backgroundcolortoWhite4);
+
+    function backgroundcolortoOrange1() {
+        div1.style.backgroundColor = "orange";
+    }
+    function backgroundcolortoPink1() {
+        div1.style.backgroundColor = "pink";
+    }
+    function backgroundcolortoWhite1(e) {
+    e.target.style.backgroundColor = "white";
+}
+    function backgroundcolortoOrange2() {
+        div2.style.backgroundColor = "orange";
+    }
+    function backgroundcolortoPink2() {
+        div2.style.backgroundColor = "pink";
+    }
+    function backgroundcolortoWhite2(e) {
+    e.target.style.backgroundColor = "white";
+}
+    function backgroundcolortoOrange3() {
+        div3.style.backgroundColor = "orange";
+    }
+    function backgroundcolortoPink3() {
+        div3.style.backgroundColor = "pink";
+    }
+    function backgroundcolortoWhite3(e) {
+    e.target.style.backgroundColor = "white";
+}
+    function backgroundcolortoOrange4() {
+        div4.style.backgroundColor = "orange";
+    }
+    function backgroundcolortoPink4() {
+        div4.style.backgroundColor = "pink";
+    }
+    function backgroundcolortoWhite4(e) {
+    e.target.style.backgroundColor = "white";
+}
+    
+</script>
+
+</html>
